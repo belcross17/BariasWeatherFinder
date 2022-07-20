@@ -3,9 +3,10 @@
     border: 0;
     margin: 0;
 }
-
+ /* nav section */
 #nav {
     justify-content: center;
+    background-image: linear-gradient(to right, gray, black);
 }
 
 nav a {
@@ -14,5 +15,34 @@ nav a {
     padding: 10px;
     font-size: 28px;
     text-decoration: none;
+}
 
+nav a:hover {
+    color: white;
+}
+
+/* search section */
+
+.search {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#search-bar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: white;
+}
+
+.form-control {
+    margin-bottom: 5px;
 }
