@@ -86,6 +86,11 @@ nav a:hover {
     padding-bottom: 70px;
 }
 
+.card {
+    border: none;
+}
+ 
+/* footer section */
 
 footer {
     text-align: center;
