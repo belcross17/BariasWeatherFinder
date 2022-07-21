@@ -46,3 +46,48 @@ nav a:hover {
 .form-control {
     margin-bottom: 5px;
 }
+
+/* weather results section */
+
+#row-1 {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.form-inline {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+#lastSearch {
+    padding-left: 35px;
+    
+}
+
+#weatherCard {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#row5day {
+    padding-bottom: 20px;
+}
+
+#rowCards {
+    justify-content: center;
+}
+
+#cardDisplay {
+    display: none;
+}
+
+.container-fluid {
+    padding-bottom: 70px;
+}
+
+
+footer {
+    text-align: center;
+    clear: both;
+}
