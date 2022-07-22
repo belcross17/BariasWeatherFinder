@@ -13,8 +13,8 @@ var forecastDate = {};
 var forecastIcon = {};
 var forecastTemp = {};
 var forecastHum = {};
-var today = moment().format('DD' + "/" + 'MM' + '/' + 'YYYY');
-var APIKey = "&units=metric&APPID=c2a625940250e9689564c95583eb14c8";
+var today = moment().format('MM' + "/" + 'DD' + '/' + 'YYYY');
+var APIKey = "&units=imperial&APPID=c2a625940250e9689564c95583eb14c8";
 var url =  "https://api.openweathermap.org/data/2.5/weather?q=";
 var citiesArray = JSON.parse(localStorage.getItem("Saved City")) || [];
 
@@ -46,7 +46,7 @@ function currentWeather(userInput) {
         var newImgMain = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png");
         mainIcon.append(newImgMain);
         cityResultText.text(cityInfo + ", " + country + " " + today);
-        tempResultText.text("Temperature: " + temp + " ºC");
+        tempResultText.text("Temperature: " + temp + " ºF");
         humidityResult.text("Humidity: " + humidity + " %");
         windResultText.text("Wind Speed: " + wind + " MPH");
         $.ajax({
@@ -77,7 +77,7 @@ function forecast (userInput) {
     dayForecast.empty();
     rowCards.empty();
     var fore5 = $("<h2>").attr("class", "forecast").text("5-Day Forecast: "); 
-    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&units=metric&APPID=123babda3bc150d180af748af99ad173";
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&units=imperial&APPID=123babda3bc150d180af748af99ad173";
     $.ajax({
         url: forecastURL,
         method: "GET"
@@ -105,7 +105,7 @@ function forecast (userInput) {
             var newImg = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon[i] + "@2x.png");
             newCardBody.append(newImg);
 
-            var newPTemp = $("<p>").attr("class", "card-text").text("Temp: " + Math.floor(forecastTemp[i]) + "ºC");
+            var newPTemp = $("<p>").attr("class", "card-text").text("Temp: " + Math.floor(forecastTemp[i]) + "ºF");
             newCardBody.append(newPTemp);
 
             var newPHum = $("<p>").attr("class", "card-text").text("Humidity: " + forecastHum[i] + " %");
